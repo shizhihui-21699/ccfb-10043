@@ -1,0 +1,37 @@
+{
+  "name": "image-layer-audit",
+  "version": "1.0.0",
+  "description": "Docker/OCI image layer forensics: recover deleted files and scan for leaked secrets",
+  "scripts": {
+    "test": "node --test tests/",
+    "scan": "node src/main.ts scan",
+    "typecheck": "tsc -p tsconfig.json",
+    "fixtures": "node tests/fixtures/write.ts",
+    "start": "node src/main.ts",
+    "list": "node src/main.ts list",
+    "recover": "node src/main.ts recover"
+  },
+  "keywords": [
+    "docker",
+    "oci",
+    "container",
+    "security",
+    "secrets",
+    "forensics",
+    "layers"
+  ],
+  "author": "",
+  "license": "MIT",
+  "type": "module",
+  "private": true,
+  "bin": {
+    "image-layer-audit": "./src/main.ts"
+  },
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.19.2",
+    "typescript": "^5.9.3"
+  }
+}
